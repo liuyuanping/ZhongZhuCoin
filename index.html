@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importing css styles -->
+    <link rel="stylesheet" href="./index.css" />
+    <title>中珠纪念币</title>
+  </head>
+  <body>
+
+    <section class="token-form-section">
+      <section class="section-header">
+        <h1>中珠纪念币</h1>
+      </section>
+      <!-- Form -->
+      <form>
+        <h2>
+          中珠纪念币是一种以太坊ERC-20代币, 它可以以数字的形式永远存在。
+        </h2>
+        <h3 class="token-detail-heading">
+          <label>中珠纪念币(ZZC)合约地址: </label>
+          <span id="ZhongZhuToken-Address"></span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <label>中珠纪念币(ZZC)定量发放合约地址: </label>
+          <span id="ZZCFaucet-Address"></span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <label>中珠纪念币(ZZC)名称: </label>
+          <span id="ZhongZhuToken-Name"></span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <label>中珠纪念币(ZZC)符号: </label>
+          <span id="ZhongZhuToken-Symbol"></span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <label>中珠纪念币(ZZC)精度: </label>
+          <span id="ZhongZhuToken-Decimals"></span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="账户地址"/>
+          <input type="text" id="account-input" placeholder="账户地址"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="账户余额" id="balance-of-btn" />
+          <span class="balance-accout">--</span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="转账给他/她" id="transfer-btn" />
+          <input type="text" id="account-transfer-to" placeholder="收款地址"/>
+          <input type="text" id="number-transfer-to" placeholder="转账数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="允许他/她花费" id="approve-btn" />
+          <input type="text" id="account-approve-to" placeholder="被允许地址"/>
+          <input type="text" id="number-approve-to" placeholder="允许数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="允许额查询" id="allowance-btn" />
+          <input type="text" id="account-allowance-from" placeholder="转出地址"/>
+          <input type="text" id="account-allowance-to" placeholder="被允许地址"/>
+          <span class="balance-allowance-accout">--</span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="降低允许额" id="dec-approve-btn" />
+          <input type="text" id="account-dec-approve" placeholder="降额地址"/>
+          <input type="text" id="number-dec-approve" placeholder="降额数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="提高允许额" id="inc-approve-btn" />
+          <input type="text" id="account-inc-approve" placeholder="提额地址"/>
+          <input type="text" id="number-inc-approve" placeholder="提额数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="从其他地址转账" id="transfer-from-btn" />
+          <input type="text" id="account-transfer-from" placeholder="转出地址"/>
+          <input type="text" id="account-transfer-from-to" placeholder="收款地址"/>
+          <input type="text" id="number-transfer-from-to" placeholder="转账数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="铸造代币" id="mint-btn" />
+          <input type="text" id="account-mint-to" placeholder="收款地址(仅管理员可用)"/>
+          <input type="text" id="number-mint-to" placeholder="铸币数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="销毁代币" id="burn-btn" />
+          <input type="text" id="number-burn" placeholder="销毁数额"/>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="总供应量查询" id="total-supply-btn" />
+          <span id="ZhongZhuToken-TotalSupply">--</span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="免费领取" id="request-btn" />
+          <span class="">[每个地址每分钟可领一次]</span>
+        </h3>
+        <h3 class="token-detail-heading">
+          <input type="button" value="上次领取时间" id="request-time-btn" />
+          <span class="last-request-time">--</span>
+        </h3>
+      </form>
+      <section class="section-footer">
+      </section>
+    </section>
+
+    <!-- Importing Ethers.js script -->
+    <script
+      src="./ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+
+    <!-- Importing javascript file -->
+    <script src="./index.js"></script>
+  </body>
+</html>
